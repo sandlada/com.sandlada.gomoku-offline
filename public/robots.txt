@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gomoku-offline.sandlada.com/sitemap.xml

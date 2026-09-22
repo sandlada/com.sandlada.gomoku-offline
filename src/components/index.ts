@@ -1,0 +1,7 @@
+export { default as BackButton } from './BackButton.vue'
+export { default as GameControls } from './GameControls.vue'
+export { default as GameHud } from './GameHud.vue'
+export { default as MoveHistory } from './MoveHistory.vue'
+export { default as GameIcon } from './GameIcon.vue'
+export { default as GomokuBoard } from './GomokuBoard.vue'
+export { default as LanguageSwitcher } from './LanguageSwitcher.vue'
