@@ -1,10 +1,10 @@
 <template>
     <button
         type="button"
-        class="back-btn"
+        class="save-btn"
         @click="emit('press')"
     >
-        <GameIcon name="back" />{{ label ?? t('nav.back') }}
+        <GameIcon name="save" />{{ label ?? t('saves.save') }}
     </button>
 </template>
 
@@ -22,8 +22,9 @@ const { t } = useI18n()
 <style scoped>
 @reference "../style.css";
 
-.back-btn {
-    @apply inline-flex items-center gap-1 self-start rounded-full border border-outline-variant px-2 py-1 text-sm text-on-surface-variant;
+.save-btn {
+    @apply flex flex-none items-center justify-center gap-1 rounded-full border border-outline px-2 text-on-surface label-large;
+    margin-left: auto;
     height: 48px;
 }
 </style>

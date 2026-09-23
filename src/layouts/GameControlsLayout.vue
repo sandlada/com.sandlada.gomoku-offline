@@ -49,20 +49,21 @@ const { t } = useI18n()
 @reference "../style.css";
 
 .controls {
-    @apply flex justify-center;
+    @apply flex w-full;
 }
 
 .row {
-    @apply flex flex-wrap justify-center gap-2;
+    @apply flex flex-wrap gap-0.5;
 }
 
 .btn {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-outline px-4 py-1.5 text-sm text-on-surface;
+    @apply grow flex items-center justify-center gap-1 rounded-full border border-outline px-4 py-1 text-sm text-on-surface;
+    height: 48px;
 }
 
 .btn:disabled {
-    opacity: 0.4;
     cursor: not-allowed;
+    @apply bg-outline-variant/25 border-outline-variant text-outline/75;
 }
 
 .btn.primary {
