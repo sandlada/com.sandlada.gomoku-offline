@@ -56,7 +56,7 @@ const emit = defineEmits<{
 }
 
 .seg button {
-    @apply rounded-full px-2 inline-flex items-center text-on-surface-variant label-large;
+    @apply select-none rounded-full px-2 inline-flex items-center text-on-surface-variant label-large;
     line-height: 1;
 }
 

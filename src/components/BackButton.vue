@@ -23,7 +23,7 @@ const { t } = useI18n()
 @reference "../style.css";
 
 .back-btn {
-    @apply inline-flex items-center gap-1 self-start rounded-full border border-outline-variant px-2 py-1 text-sm text-on-surface-variant;
+    @apply select-none inline-flex items-center gap-1 self-start rounded-full border border-outline-variant px-2 py-1 text-sm text-on-surface-variant;
     height: 48px;
 }
 </style>
