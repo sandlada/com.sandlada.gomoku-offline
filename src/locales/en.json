@@ -1,72 +1,72 @@
 {
-  "app": {
-    "title": "Gomoku Offline",
-    "subtitle": "Free offline five-in-a-row — vs AI or local 2-player",
-    "rulesTitle": "How to play",
-    "rules": "Black moves first. Place 5 stones in a row — horizontal, vertical, or diagonal — to win. Play against the AI or a friend on this device. No account, no network needed."
-  },
-  "game": {
-    "black": "Black",
-    "white": "White",
-    "turn": "{stone} to move",
-    "blackWins": "Black wins",
-    "whiteWins": "White wins",
-    "draw": "Draw",
-    "resigned": "{stone} wins (resignation)",
-    "restart": "Restart",
-    "undo": "Undo",
-    "resign": "Resign",
-    "modeAi": "Vs AI",
-    "modeLocal": "2 Players",
-    "moves": "{count} moves",
-    "thinking": "AI thinking…",
-    "score": "Black {b} · White {w} · Draws {d}",
-    "history": "Moves",
-    "noMoves": "No moves yet",
-    "announce": "{stone} played {pos}",
-    "redo": "Redo",
-    "timeout": "{stone} wins on time",
-    "confirm": "Tap again to confirm",
-    "difficulty": "Difficulty",
-    "easy": "Easy",
-    "normal": "Normal"
-  },
-  "lang": {
-    "label": "Language",
-    "en": "English",
-    "zhHant": "傳統漢字",
-    "zhHans": "简体中文"
-  },
-  "nav": {
-    "home": "Home",
-    "settings": "Settings",
-    "back": "Back"
-  },
-  "menu": {
-    "start": "Start Game",
-    "saves": "Saved Games",
-    "settings": "Settings"
-  },
-  "setup": {
-    "title": "New Game",
-    "mode": "Mode",
-    "difficulty": "Difficulty",
-    "time": "Time control",
-    "timeHint": "X+Y: X minutes total per player, plus Y seconds after every move. The first player out of time loses."
-  },
-  "time": {
-    "none": "No clock"
-  },
-  "settings": {
-    "theme": "Theme",
-    "light": "Light",
-    "dark": "Dark"
-  },
-  "saves": {
-    "save": "Save game",
-    "empty": "No saved games yet",
-    "resume": "Resume",
-    "delete": "Delete",
-    "summary": "{mode} · {count} moves"
-  }
+    "app": {
+        "title": "Gomoku Offline",
+        "subtitle": "Free offline five-in-a-row — vs AI or local 2-player",
+        "rulesTitle": "How to play",
+        "rules": "Black moves first. Place 5 stones in a row — horizontal, vertical, or diagonal — to win. Play against the AI or a friend on this device. No account, no network needed."
+    },
+    "game": {
+        "black": "Black",
+        "white": "White",
+        "turn": "{stone} to move",
+        "blackWins": "Black wins",
+        "whiteWins": "White wins",
+        "draw": "Draw",
+        "resigned": "{stone} wins (resignation)",
+        "restart": "Restart",
+        "undo": "Undo",
+        "resign": "Resign",
+        "modeAi": "Vs AI",
+        "modeLocal": "2 Players",
+        "moves": "{count} moves",
+        "thinking": "AI thinking…",
+        "score": "Black {b} · White {w} · Draws {d}",
+        "history": "Moves",
+        "noMoves": "No moves yet",
+        "announce": "{stone} played {pos}",
+        "redo": "Redo",
+        "timeout": "{stone} wins on time",
+        "confirm": "Tap again to confirm",
+        "difficulty": "Difficulty",
+        "easy": "Easy",
+        "normal": "Normal"
+    },
+    "lang": {
+        "label": "Language",
+        "en": "English",
+        "zhHant": "傳統漢字",
+        "zhHans": "简体中文"
+    },
+    "nav": {
+        "home": "Home",
+        "settings": "Settings",
+        "back": "Back"
+    },
+    "menu": {
+        "start": "Start Game",
+        "saves": "Saved Games",
+        "settings": "Settings"
+    },
+    "setup": {
+        "title": "New Game",
+        "mode": "Mode",
+        "difficulty": "Difficulty",
+        "time": "Time control",
+        "timeHint": "X+Y: X minutes total per player, plus Y seconds after every move. The first player out of time loses."
+    },
+    "time": {
+        "none": "No clock"
+    },
+    "settings": {
+        "theme": "Theme",
+        "light": "Light",
+        "dark": "Dark"
+    },
+    "saves": {
+        "save": "Save game",
+        "empty": "No saved games yet",
+        "resume": "Resume",
+        "delete": "Delete",
+        "summary": "{mode} · {count} moves"
+    }
 }

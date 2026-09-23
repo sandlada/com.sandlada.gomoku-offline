@@ -3,8 +3,8 @@ export type Cell = Stone | null
 export type Board = readonly (readonly Cell[])[]
 
 export interface Position {
-  readonly row: number
-  readonly col: number
+    readonly row: number
+    readonly col: number
 }
 
 export type GameMode = 'ai' | 'local'

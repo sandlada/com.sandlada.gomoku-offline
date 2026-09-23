@@ -1,72 +1,72 @@
 {
-  "app": {
-    "title": "五子棋離線版",
-    "subtitle": "免費離線五子棋——對戰 AI 或本機雙人",
-    "rulesTitle": "玩法說明",
-    "rules": "黑子先行。橫、豎、斜連成五子即獲勝。可對戰 AI，或與朋友在同一裝置上對弈。無需帳號，無需連線。"
-  },
-  "game": {
-    "black": "黑子",
-    "white": "白子",
-    "turn": "{stone} 行棋",
-    "blackWins": "黑子獲勝",
-    "whiteWins": "白子獲勝",
-    "draw": "和棋",
-    "resigned": "{stone} 獲勝（對方認輸）",
-    "restart": "重新開始",
-    "undo": "悔棋",
-    "resign": "認輸",
-    "modeAi": "對戰 AI",
-    "modeLocal": "雙人對戰",
-    "moves": "第 {count} 手",
-    "thinking": "AI 思考中…",
-    "score": "黑子 {b} · 白子 {w} · 和棋 {d}",
-    "history": "棋譜",
-    "noMoves": "尚未行棋",
-    "announce": "{stone}落在{pos}",
-    "redo": "重做",
-    "timeout": "{stone}超時獲勝",
-    "confirm": "再點一次確認落子",
-    "difficulty": "難度",
-    "easy": "簡單",
-    "normal": "普通"
-  },
-  "lang": {
-    "label": "語言",
-    "en": "English",
-    "zhHant": "傳統漢字",
-    "zhHans": "简体中文"
-  },
-  "nav": {
-    "home": "主頁",
-    "settings": "設定",
-    "back": "返回"
-  },
-  "menu": {
-    "start": "開始遊戲",
-    "saves": "存檔",
-    "settings": "設定"
-  },
-  "setup": {
-    "title": "新對局",
-    "mode": "模式",
-    "difficulty": "難度",
-    "time": "時間",
-    "timeHint": "X+Y：每方共有 X 分鐘，每步之後加 Y 秒。時間先耗盡的一方落敗。"
-  },
-  "time": {
-    "none": "無計時"
-  },
-  "settings": {
-    "theme": "主題",
-    "light": "淺色",
-    "dark": "深色"
-  },
-  "saves": {
-    "save": "儲存對局",
-    "empty": "尚無存檔",
-    "resume": "繼續",
-    "delete": "刪除",
-    "summary": "{mode} · {count} 手"
-  }
+    "app": {
+        "title": "五子棋離線版",
+        "subtitle": "免費離線五子棋——對戰 AI 或本機雙人",
+        "rulesTitle": "玩法說明",
+        "rules": "黑子先行。橫、豎、斜連成五子即獲勝。可對戰 AI，或與朋友在同一裝置上對弈。無需帳號，無需連線。"
+    },
+    "game": {
+        "black": "黑子",
+        "white": "白子",
+        "turn": "{stone} 行棋",
+        "blackWins": "黑子獲勝",
+        "whiteWins": "白子獲勝",
+        "draw": "和棋",
+        "resigned": "{stone} 獲勝（對方認輸）",
+        "restart": "重新開始",
+        "undo": "悔棋",
+        "resign": "認輸",
+        "modeAi": "對戰 AI",
+        "modeLocal": "雙人對戰",
+        "moves": "第 {count} 手",
+        "thinking": "AI 思考中…",
+        "score": "黑子 {b} · 白子 {w} · 和棋 {d}",
+        "history": "棋譜",
+        "noMoves": "尚未行棋",
+        "announce": "{stone}落在{pos}",
+        "redo": "重做",
+        "timeout": "{stone}超時獲勝",
+        "confirm": "再點一次確認落子",
+        "difficulty": "難度",
+        "easy": "簡單",
+        "normal": "普通"
+    },
+    "lang": {
+        "label": "語言",
+        "en": "English",
+        "zhHant": "傳統漢字",
+        "zhHans": "简体中文"
+    },
+    "nav": {
+        "home": "主頁",
+        "settings": "設定",
+        "back": "返回"
+    },
+    "menu": {
+        "start": "開始遊戲",
+        "saves": "存檔",
+        "settings": "設定"
+    },
+    "setup": {
+        "title": "新對局",
+        "mode": "模式",
+        "difficulty": "難度",
+        "time": "時間",
+        "timeHint": "X+Y：每方共有 X 分鐘，每步之後加 Y 秒。時間先耗盡的一方落敗。"
+    },
+    "time": {
+        "none": "無計時"
+    },
+    "settings": {
+        "theme": "主題",
+        "light": "淺色",
+        "dark": "深色"
+    },
+    "saves": {
+        "save": "儲存對局",
+        "empty": "尚無存檔",
+        "resume": "繼續",
+        "delete": "刪除",
+        "summary": "{mode} · {count} 手"
+    }
 }

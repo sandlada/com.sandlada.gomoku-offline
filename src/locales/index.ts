@@ -11,14 +11,14 @@ const initial: AppLocale = saved === 'zh-Hant' || saved === 'zh-Hans' || saved =
 document.documentElement.lang = initial
 
 export const i18n = createI18n({
-  legacy: false,
-  locale: initial,
-  fallbackLocale: 'en',
-  messages: { en, 'zh-Hant': zhHant, 'zh-Hans': zhHans },
+    legacy: false,
+    locale: initial,
+    fallbackLocale: 'en',
+    messages: { en, 'zh-Hant': zhHant, 'zh-Hans': zhHans },
 })
 
 export const LOCALES: readonly { readonly code: AppLocale; readonly labelKey: string }[] = [
-  { code: 'en', labelKey: 'lang.en' },
-  { code: 'zh-Hant', labelKey: 'lang.zhHant' },
-  { code: 'zh-Hans', labelKey: 'lang.zhHans' },
+    { code: 'en', labelKey: 'lang.en' },
+    { code: 'zh-Hant', labelKey: 'lang.zhHant' },
+    { code: 'zh-Hans', labelKey: 'lang.zhHans' },
 ]
