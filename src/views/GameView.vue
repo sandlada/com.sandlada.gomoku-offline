@@ -23,6 +23,11 @@
             <SaveGameLayout />
         </div>
         <GomokuBoardLayout />
+        <VictoryConfetti
+            v-if="celebration !== null"
+            :key="`${game.result}-${game.moveCount}`"
+            :variant="celebration"
+        />
         <div class="panel">
             <GameHudLayout />
             <GameControlsLayout />
@@ -32,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import { SegmentedControl, type SegmentedOption } from '@components/index'
+import { SegmentedControl, VictoryConfetti, type SegmentedOption } from '@components/index'
 import { BackButtonLayout, GameControlsLayout, GameHudLayout, GomokuBoardLayout, MoveHistoryLayout, SaveGameLayout } from '@layouts/index'
 import { useGameStore } from '@store/game'
 import { computed, onMounted, onUnmounted } from 'vue'
@@ -43,6 +48,13 @@ defineProps<{ readonly compact: boolean }>()
 
 const { t } = useI18n()
 const game = useGameStore()
+
+/** Single burst: win shows party colors, draw shows white pieces. */
+const celebration = computed<'win' | 'draw' | null>(() => {
+    if (game.result === 'black' || game.result === 'white') return 'win'
+    if (game.result === 'draw') return 'draw'
+    return null
+})
 
 const modeOptions = computed<readonly SegmentedOption<GameMode>[]>(() => [
     { value: 'ai', label: t('game.modeAi') },

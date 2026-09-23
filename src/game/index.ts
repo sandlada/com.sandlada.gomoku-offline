@@ -1,5 +1,6 @@
 export * from './ai'
 export * from './clock'
+export * from './confetti'
 export * from './coordinates'
 export * from './rules'
 export * from './types'
