@@ -31,7 +31,7 @@ import { useI18n } from 'vue-i18n'
 import { formatClock } from '../game/index'
 import type { Stone } from '../game/index'
 import { useGameStore } from '@store/game'
-import GameIcon from './GameIcon.vue'
+import { GameIcon } from '@components/index'
 
 const game = useGameStore()
 const { t } = useI18n()

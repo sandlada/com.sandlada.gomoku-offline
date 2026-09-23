@@ -1,6 +1,6 @@
 <template>
   <div class="page-narrow saves">
-    <BackButton />
+    <BackButtonLayout />
     <h2 class="heading">{{ t('menu.saves') }}</h2>
     <p v-if="saves.saves.length === 0" class="empty">{{ t('saves.empty') }}</p>
     <ul v-else class="list">
@@ -26,7 +26,7 @@
 import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import type { SaveEntry } from '@store/saves'
-import { BackButton } from '@components/index'
+import { BackButtonLayout } from '@layouts/index'
 import { useGameStore } from '@store/game'
 import { useSavesStore } from '@store/saves'
 

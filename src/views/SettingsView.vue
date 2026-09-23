@@ -1,32 +1,38 @@
 <template>
   <div class="page-narrow settings">
-    <BackButton />
+    <BackButtonLayout />
     <h2 class="heading">{{ t('menu.settings') }}</h2>
     <section class="group">
       <h3>{{ t('settings.theme') }}</h3>
-      <div class="seg" role="group" :aria-label="t('settings.theme')">
-        <button type="button" :class="{ active: settings.theme === 'light' }" @click="settings.setTheme('light')">
-          {{ t('settings.light') }}
-        </button>
-        <button type="button" :class="{ active: settings.theme === 'dark' }" @click="settings.setTheme('dark')">
-          {{ t('settings.dark') }}
-        </button>
-      </div>
+      <SegmentedControl
+        :model-value="settings.theme"
+        :options="themeOptions"
+        :aria-label="t('settings.theme')"
+        class="self-start"
+        @update:model-value="settings.setTheme"
+      />
     </section>
     <section class="group">
       <h3>{{ t('lang.label') }}</h3>
-      <LanguageSwitcher />
+      <LanguageSwitcherLayout />
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { BackButton, LanguageSwitcher } from '@components/index'
-import { useSettingsStore } from '@store/settings'
+import { SegmentedControl, type SegmentedOption } from '@components/index'
+import { BackButtonLayout, LanguageSwitcherLayout } from '@layouts/index'
+import { useSettingsStore, type Theme } from '@store/settings'
 
 const { t } = useI18n()
 const settings = useSettingsStore()
+
+const themeOptions = computed<readonly SegmentedOption<Theme>[]>(() => [
+  { value: 'light', label: t('settings.light') },
+  { value: 'dark', label: t('settings.dark') },
+])
 </script>
 
 <style scoped>
@@ -43,14 +49,5 @@ const settings = useSettingsStore()
 }
 .group h3 {
   @apply title-small text-on-surface-variant;
-}
-.seg {
-  @apply inline-flex gap-1 self-start rounded-full border border-outline-variant p-1;
-}
-.seg button {
-  @apply rounded-full px-4 py-1.5 text-on-surface-variant label-large;
-}
-.seg button.active {
-  @apply bg-primary-container text-on-primary-container;
 }
 </style>

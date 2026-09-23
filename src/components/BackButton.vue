@@ -1,22 +1,18 @@
 <template>
-  <button type="button" class="back-btn" @click="goBack">
-    <GameIcon name="back" />{{ t('nav.back') }}
+  <button type="button" class="back-btn" @click="emit('press')">
+    <GameIcon name="back" />{{ label ?? t('nav.back') }}
   </button>
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import GameIcon from './GameIcon.vue'
 
-const { t } = useI18n()
-const router = useRouter()
+defineProps<{ readonly label?: string }>()
 
-/** Back in history; home when the page was opened directly. */
-const goBack = async (): Promise<void> => {
-  if (window.history.state?.back) router.back()
-  else await router.push('/')
-}
+const emit = defineEmits<{ press: [] }>()
+
+const { t } = useI18n()
 </script>
 
 <style scoped>

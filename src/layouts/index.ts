@@ -1,1 +1,7 @@
 export { default as AppLayout } from './AppLayout.vue'
+export { default as BackButtonLayout } from './BackButtonLayout.vue'
+export { default as GameControlsLayout } from './GameControlsLayout.vue'
+export { default as GameHudLayout } from './GameHudLayout.vue'
+export { default as GomokuBoardLayout } from './GomokuBoardLayout.vue'
+export { default as LanguageSwitcherLayout } from './LanguageSwitcherLayout.vue'
+export { default as MoveHistoryLayout } from './MoveHistoryLayout.vue'
