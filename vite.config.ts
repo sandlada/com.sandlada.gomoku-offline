@@ -11,11 +11,12 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'pwa-icon.svg', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'robots.txt', 'sitemap.xml'],
+      includeAssets: ['favicon.svg', 'pwa-icon.svg', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'robots.txt', 'sitemap.xml'],
       manifest: {
         name: 'Gomoku Offline — Five in a Row',
         short_name: 'Gomoku',
         description: 'Free offline Gomoku (five in a row): vs AI or local 2-player. 免費離線五子棋。',
+        categories: ['games', 'entertainment'],
         lang: 'en',
         dir: 'ltr',
         start_url: '.',
@@ -29,6 +30,9 @@ export default defineConfig({
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
           { src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
           { src: 'icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+        ],
+        screenshots: [
+          { src: 'og-cover.png', sizes: '1200x630', type: 'image/png', form_factor: 'wide' },
         ],
       },
       workbox: {

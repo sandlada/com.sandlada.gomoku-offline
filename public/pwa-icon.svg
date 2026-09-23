@@ -1,8 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="112" fill="#f4fbf1"/>
-  <g stroke="#171d17" stroke-width="10" opacity="0.9">
-    <path d="M116 176h280M116 256h280M116 336h280M176 116v280M256 116v280M336 116v280"/>
+  <g id="artwork">
+    <g stroke="#171d17" stroke-width="10" opacity="0.9">
+      <path d="M76 76V436M166 76V436M256 76V436M346 76V436M436 76V436M76 76H436M76 166H436M76 256H436M76 346H436M76 436H436"/>
+    </g>
+    <g fill="#171d17">
+      <circle cx="76" cy="256" r="34"/>
+      <circle cx="166" cy="256" r="34"/>
+      <circle cx="256" cy="256" r="34"/>
+      <circle cx="346" cy="256" r="34"/>
+    </g>
+    <circle cx="436" cy="256" r="34" fill="#ffffff" stroke="#171d17" stroke-width="10"/>
   </g>
-  <circle cx="256" cy="256" r="44" fill="#171d17"/>
-  <circle cx="336" cy="176" r="34" fill="#ffffff" stroke="#171d17" stroke-width="10"/>
 </svg>

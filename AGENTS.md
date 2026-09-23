@@ -10,8 +10,9 @@ Vue 3 SPA: offline Gomoku web game (solo vs AI + local 2-player). No backend. Mu
 - `npm run check:i18n` — locale key-parity gate (`en` / `zh-Hant` / `zh-Hans`)
 - `npm run build` — typecheck (`vue-tsc -b`) then `vite build`; always run before finishing
 - `npm run preview` — serve `dist/` to verify production build
+- `npm run deploy` / `npm run deploy:dry` — Workers Static Assets deploy (`wrangler deploy`, `--dry-run` validates only); hosting target `gomoku-offline.sandlada.com`
 - No lint / CI configured.
-- Offline PWA via `vite-plugin-pwa` (`generateSW`, precaches dist incl. fonts). Icons: `public/pwa-icon.svg` source + generated `icon-192/512.png` + `icon-maskable-512.png`; regen with `npm run icons` (`scripts/generate-icons.mjs`, `@resvg/resvg-js`).
+- Offline PWA via `vite-plugin-pwa` (`generateSW`, precaches dist incl. fonts). Brand sources: `public/pwa-icon.svg` + `public/favicon.svg` (logo) + `public/og-cover.svg` (social cover); generated `icon-192/512.png` + `icon-maskable-512.png` + `apple-touch-icon.png` + `og-cover.png` (1200x630); regen with `npm run icons` (`scripts/generate-icons.mjs`, `@resvg/resvg-js`).
 
 ## Current state (verified 2026-09-22)
 

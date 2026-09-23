@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08351f"/>
+      <stop offset="1" stop-color="#006d38"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="920" cy="315" r="260" fill="#ffffff" opacity="0.06"/>
+
+  <!-- brand mark -->
+  <g>
+    <rect x="80" y="90" width="110" height="110" rx="26" fill="#f4fbf1"/>
+    <g stroke="#006d38" stroke-width="7" opacity="0.75" stroke-linecap="round">
+      <path d="M108 108V182M135 108V182M162 108V182M108 108H162M108 135H162M108 162H162"/>
+    </g>
+    <circle cx="108" cy="135" r="12" fill="#101510"/>
+    <circle cx="135" cy="135" r="12" fill="#101510"/>
+    <circle cx="162" cy="135" r="13" fill="#d99a00"/>
+  </g>
+
+  <!-- title -->
+  <g font-family="Arial, Helvetica, 'Noto Sans', 'DejaVu Sans', sans-serif" fill="#ffffff">
+    <text x="210" y="172" font-size="76" font-weight="800" letter-spacing="2">GOMOKU</text>
+    <text x="210" y="244" font-size="76" font-weight="800" letter-spacing="2">OFFLINE</text>
+  </g>
+  <text x="80" y="332" font-family="Arial, Helvetica, 'Noto Sans', 'DejaVu Sans', sans-serif" font-size="36" fill="#cfe6d6">Five in a Row · vs AI or 2-Player</text>
+
+  <!-- pills -->
+  <g font-family="Arial, Helvetica, 'Noto Sans', 'DejaVu Sans', sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <rect x="80" y="370" width="130" height="52" rx="26" fill="#ffffff" opacity="0.16"/>
+    <text x="145" y="405">FREE</text>
+    <rect x="226" y="370" width="180" height="52" rx="26" fill="#ffffff" opacity="0.16"/>
+    <text x="316" y="405">OFFLINE</text>
+    <rect x="422" y="370" width="220" height="52" rx="26" fill="#ffffff" opacity="0.16"/>
+    <text x="532" y="405">NO SIGN-UP</text>
+  </g>
+
+  <text x="80" y="560" font-family="Arial, Helvetica, 'Noto Sans', 'DejaVu Sans', sans-serif" font-size="30" fill="#9fd3b4">gomoku-offline.sandlada.com</text>
+
+  <!-- board panel -->
+  <g>
+    <rect x="720" y="105" width="400" height="420" rx="28" fill="#f4fbf1"/>
+    <g stroke="#1c4632" stroke-width="4" opacity="0.85">
+      <path d="M760 145V465M800 145V465M840 145V465M880 145V465M920 145V465M960 145V465M1000 145V465M1040 145V465M1080 145V465M760 145H1080M760 185H1080M760 225H1080M760 265H1080M760 305H1080M760 345H1080M760 385H1080M760 425H1080M760 465H1080"/>
+    </g>
+    <g fill="#1c4632" opacity="0.5">
+      <circle cx="840" cy="225" r="6"/>
+      <circle cx="1000" cy="225" r="6"/>
+      <circle cx="840" cy="385" r="6"/>
+      <circle cx="1000" cy="385" r="6"/>
+    </g>
+    <circle cx="1000" cy="225" r="17" fill="#ffffff" stroke="#1c4632" stroke-width="4"/>
+    <circle cx="960" cy="385" r="17" fill="#101510"/>
+    <circle cx="1040" cy="345" r="17" fill="#ffffff" stroke="#1c4632" stroke-width="4"/>
+    <g stroke="#1c4632" stroke-width="4">
+      <circle cx="760" cy="305" r="17" fill="#101510"/>
+      <circle cx="800" cy="305" r="17" fill="#101510"/>
+      <circle cx="840" cy="305" r="17" fill="#101510"/>
+      <circle cx="880" cy="305" r="17" fill="#101510"/>
+    </g>
+    <circle cx="920" cy="305" r="25" fill="none" stroke="#d99a00" stroke-width="4" opacity="0.55"/>
+    <circle cx="920" cy="305" r="19" fill="#d99a00" stroke="#1c4632" stroke-width="4"/>
+  </g>
+</svg>

@@ -2,48 +2,164 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gomoku Offline — Free Five in a Row vs AI or 2-Player | 五子棋離線版</title>
     <meta
       name="description"
-      content="Free offline Gomoku (five in a row). Play vs AI or local 2-player. No account, works offline. 免費離線五子棋，对战AI或双人。Free offline five-in-a-row."
+      content="Free offline Gomoku (five in a row): play vs AI or local 2-player. No account, no ads, works offline as a PWA. 免費離線五子棋：對戰 AI 或雙人對弈。"
     />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Sandlada" />
+    <meta name="application-name" content="Gomoku Offline" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Gomoku Offline" />
+    <meta name="theme-color" content="#006d38" />
     <link rel="canonical" href="https://gomoku-offline.sandlada.com/" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Gomoku Offline" />
+    <meta property="og:url" content="https://gomoku-offline.sandlada.com/" />
     <meta property="og:title" content="Gomoku Offline — Free Five in a Row vs AI or 2-Player" />
     <meta
       property="og:description"
-      content="Free offline Gomoku. Vs AI or local 2-player. Black moves first, connect 5 to win."
+      content="Free offline Gomoku. Vs AI or local 2-player. Black moves first, connect 5 to win. 免費離線五子棋。"
+    />
+    <meta property="og:image" content="https://gomoku-offline.sandlada.com/og-cover.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Gomoku Offline cover: five-in-a-row board with the winning fifth stone highlighted"
     />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="zh_Hant" />
-    <meta property="og:locale:alternate" content="zh_Hans" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:locale:alternate" content="zh_TW" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Gomoku Offline — Free Five in a Row" />
     <meta name="twitter:description" content="Offline Gomoku: vs AI or 2-player. 五子棋離線版，支援傳統漢字 / 简体中文。" />
+    <meta name="twitter:image" content="https://gomoku-offline.sandlada.com/og-cover.png" />
+    <meta name="twitter:image:alt" content="Gomoku Offline cover: five-in-a-row board" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": "Gomoku Offline",
-        "alternateName": ["五子棋離線版", "五子棋离线版"],
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "Web",
-        "isAccessibleForFree": true,
-        "inLanguage": ["en", "zh-Hant", "zh-Hans"],
-        "numberOfPlayers": ["1", "2"],
-        "playMode": ["SinglePlayer", "MultiPlayer", "CoOp"],
-        "gamePlatform": "Web browser"
+        "@graph": [
+          {
+            "@type": "VideoGame",
+            "name": "Gomoku Offline",
+            "alternateName": ["五子棋離線版", "五子棋离线版"],
+            "url": "https://gomoku-offline.sandlada.com/",
+            "image": "https://gomoku-offline.sandlada.com/og-cover.png",
+            "description": "Free offline Gomoku (five in a row): solo vs AI or local 2-player. No account, no ads, playable offline as a PWA.",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "Web",
+            "isAccessibleForFree": true,
+            "inLanguage": ["en", "zh-Hant", "zh-Hans"],
+            "numberOfPlayers": ["1", "2"],
+            "playMode": ["SinglePlayer", "MultiPlayer", "CoOp"],
+            "gamePlatform": "Web browser",
+            "author": { "@type": "Organization", "name": "Sandlada" },
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is Gomoku Offline really free and playable offline?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. No account, no ads. After the first load the PWA works fully offline."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do you win a game of Gomoku?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Black moves first. Connect 5 stones in a row horizontally, vertically, or diagonally to win."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I play against the computer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Play solo vs AI with multiple difficulty levels, or local 2-player on the same device."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which languages are supported?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "English, Traditional Chinese (傳統漢字) and Simplified Chinese (简体中文)."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
   <body>
     <div id="app">
-      <h1>Gomoku Offline — Free Five in a Row</h1>
-      <p>Black moves first. Connect 5 stones horizontally, vertically, or diagonally to win. Play vs AI or a friend offline.</p>
+      <header>
+        <h1>Gomoku Offline — Free Five in a Row</h1>
+        <p>
+          Free offline Gomoku: play solo vs AI or local 2-player on the same device. No account, no ads —
+          install it as a PWA and play without internet after the first load.
+        </p>
+        <p>免費離線五子棋：單人對戰 AI，或與朋友同機雙人對弈。免註冊、無廣告，首次載入後可離線遊玩。</p>
+        <p>免费离线五子棋：单人对战 AI，或与朋友同机双人对弈。免注册、无广告，首次加载后可离线游玩。</p>
+      </header>
+      <main>
+        <section>
+          <h2>How to play</h2>
+          <ol>
+            <li>Black moves first on an empty intersection.</li>
+            <li>Players alternate placing one stone per turn.</li>
+            <li>Connect 5 stones in a row — horizontally, vertically, or diagonally — to win.</li>
+            <li>Resign, undo, or save the game at any time from the game screen.</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Features</h2>
+          <ul>
+            <li>Solo vs AI with multiple difficulty levels</li>
+            <li>Local 2-player on one device</li>
+            <li>Game clocks, undo, resign, and saved games</li>
+            <li>Trilingual UI: English, 傳統漢字, 简体中文</li>
+            <li>Installable offline-first PWA</li>
+            <li>Free forever, no account, no ads</li>
+          </ul>
+        </section>
+        <section>
+          <h2>FAQ</h2>
+          <details>
+            <summary>Is Gomoku Offline really free and playable offline?</summary>
+            <p>Yes. No account, no ads. After the first load the PWA works fully offline.</p>
+          </details>
+          <details>
+            <summary>How do you win a game of Gomoku?</summary>
+            <p>Black moves first. Connect 5 stones in a row horizontally, vertically, or diagonally to win.</p>
+          </details>
+          <details>
+            <summary>Can I play against the computer?</summary>
+            <p>Yes. Play solo vs AI with multiple difficulty levels, or local 2-player on the same device.</p>
+          </details>
+          <details>
+            <summary>Which languages are supported?</summary>
+            <p>English, Traditional Chinese (傳統漢字) and Simplified Chinese (简体中文).</p>
+          </details>
+        </section>
+      </main>
+      <footer>
+        <p>Gomoku Offline by Sandlada — https://gomoku-offline.sandlada.com/</p>
+      </footer>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>

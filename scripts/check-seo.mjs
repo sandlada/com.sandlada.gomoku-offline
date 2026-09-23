@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs'
 
 /** SEO gate: crawlers must see these in dist/index.html without JS. Usage: npm run check:seo (after build) */
-const required = ['<title>', 'name="description"', 'rel="canonical"', 'og:locale:alternate', 'application/ld+json', '<h1>', 'theme-color', 'manifest']
+const required = ['<title>', 'name="description"', 'rel="canonical"', 'og:url', 'og:image', 'og:locale:alternate', 'twitter:image', 'apple-touch-icon', 'application/ld+json', 'FAQPage', '<h1>', '<h2>', 'theme-color', 'manifest']
 const h = readFileSync(new URL('../dist/index.html', import.meta.url), 'utf8')
 const missing = required.filter((s) => !h.includes(s))
 
