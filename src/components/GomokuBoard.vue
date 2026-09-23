@@ -157,21 +157,19 @@ const isLast = (row: number, col: number): boolean => {
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .board-frame {
   /* Fallback when container units are unsupported. */
   --cell: clamp(18px, calc(6.25vw - 3px), 40px);
+  @apply block select-none rounded-large bg-surface-container-lowest;
   --line: var(--md-sys-color-outline-variant);
-  @apply block select-none;
   width: 100%;
   margin-inline: auto;
   container-type: inline-size;
   /* Exact fit: 15 cells + coord gutter + 2px label gap = content width. */
   --cell: max(18px, calc((100cqw - var(--coord-w, 10px) - 2px) / 15));
-  border-radius: var(--md-sys-shape-corner-value-large, 16px);
   /* border: 1px solid var(--md-sys-color-outline-variant); */
-  background: var(--md-sys-color-surface-container-lowest);
   /* padding: clamp(2px, 1vw, 4px); */
   box-shadow: var(--md-sys-elevation-level1, 0 1px 3px rgb(0 0 0 / 0.12));
 }
@@ -193,11 +191,10 @@ const isLast = (row: number, col: number): boolean => {
   margin-right: 2px;
 }
 .coord {
-  @apply grid place-items-center;
+  @apply grid place-items-center text-on-surface-variant;
   width: var(--cell);
   height: var(--cell);
   font-size: 9px;
-  color: var(--md-sys-color-on-surface-variant);
 }
 .coords-col .coord {
   width: var(--coord-w, 10px);
@@ -225,11 +222,10 @@ const isLast = (row: number, col: number): boolean => {
   background-position: 0 0;
 }
 .star {
-  @apply absolute;
+  @apply absolute bg-on-surface-variant;
   width: 7px;
   height: 7px;
   border-radius: 9999px;
-  background: var(--md-sys-color-on-surface-variant);
   transform: translate(-50%, -50%);
 }
 .cell {
@@ -242,7 +238,8 @@ const isLast = (row: number, col: number): boolean => {
   -webkit-tap-highlight-color: transparent;
 }
 .cell:focus-visible {
-  outline: 2px solid var(--md-sys-color-primary);
+  @apply outline-2 outline-primary;
+  outline-style: solid;
   outline-offset: -2px;
 }
 .board-frame.thinking .grid {
@@ -257,11 +254,10 @@ const isLast = (row: number, col: number): boolean => {
   position: absolute;
   inset: 8%;
   border-radius: 9999px;
-  border: 2px dashed var(--md-sys-color-primary);
+  @apply border-2 border-dashed border-primary;
 }
 .confirm-hint {
-  @apply mt-2 text-center text-xs;
-  color: var(--md-sys-color-primary);
+  @apply mt-2 text-center text-primary body-small;
 }
 .sr-only {
   @apply sr-only;
@@ -279,7 +275,7 @@ const isLast = (row: number, col: number): boolean => {
 }
 .stone.white {
   background: radial-gradient(circle at 34% 30%, #ffffff 0%, #e8ebee 55%, #c3c9d1 100%);
-  border: 1px solid var(--md-sys-color-outline);
+  @apply border border-outline;
   box-shadow:
     inset 0 -2px 4px rgb(0 0 0 / 0.12),
     0 2px 4px rgb(0 0 0 / 0.3);
@@ -309,7 +305,7 @@ const isLast = (row: number, col: number): boolean => {
   height: 34%;
   margin: 33% auto 0;
   border-radius: 9999px;
-  background: var(--md-sys-color-primary);
+  @apply bg-primary;
 }
 .ghost {
   width: 86%;
@@ -326,10 +322,12 @@ const isLast = (row: number, col: number): boolean => {
 }
 .ghost.white {
   background: #ffffff;
-  border: 1px solid var(--md-sys-color-outline);
+  @apply border border-outline;
 }
 .cell.won .stone {
-  outline: 2.5px solid var(--md-sys-color-primary);
+  @apply outline-primary;
+  outline-width: 2.5px;
+  outline-style: solid;
   outline-offset: 2px;
 }
 </style>

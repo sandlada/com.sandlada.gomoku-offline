@@ -17,7 +17,7 @@ import { AppLayout } from '@layouts/index'
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "./style.css";
 
 .app {
   @apply relative;

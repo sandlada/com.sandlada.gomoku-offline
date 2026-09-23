@@ -39,9 +39,9 @@ Vue 3 SPA: offline Gomoku web game (solo vs AI + local 2-player). No backend. Mu
 
 ## Styling — strict order
 
-1. MD3 tokens from `@sandlada/material-design-css` are the source of truth for color/typography/shape. Minimalist thin-line aesthetic; do not hardcode palette values.
+1. MD3 tokens from `@sandlada/material-design-css` are the source of truth for color/typography/shape. Minimalist thin-line aesthetic; do not hardcode palette values. The package ships Tailwind v4 support via `*/tw.css` (already imported in `src/style.css`): use `bg-primary` / `text-on-primary` / `bg-surface-container-lowest`, `rounded-medium` / `rounded-large`, `body-large` / `title-large` / `label-large`, etc. directly in templates or `@apply`.
 2. Breakpoints only via `@sandlada/breakpoint`, never raw `@media (max-width: ...)` for layout breakpoints.
-3. Tailwind: use `@reference` + `@apply` inside `<style>` / CSS files, not long utility strings in templates. Template classes only for trivial layout. `@apply` accepts only core Tailwind utilities — MD3 shape/color (e.g. `rounded-large`, `bg-surface-container-lowest`) fail the build; express those via `var(--md-sys-*)` instead.
+3. Tailwind: use `@reference "../style.css"` (or `./style.css` from `src/`) + `@apply` inside `<style>` / CSS files, not long utility strings in templates. Template classes only for trivial layout. `@reference "tailwindcss"` alone does NOT see MD3 `@theme`/`@utility` tokens — always reference `style.css` so `@apply bg-primary rounded-medium body-large` resolves.
 
 ## i18n (product requirement)
 

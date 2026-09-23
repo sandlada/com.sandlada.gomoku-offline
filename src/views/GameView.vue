@@ -38,7 +38,7 @@ const saveAndGo = async (): Promise<void> => {
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .game-screen {
   @apply flex w-full flex-col items-center gap-4;
@@ -56,8 +56,6 @@ const saveAndGo = async (): Promise<void> => {
   grid-column: 1 / -1;
 }
 .save-btn {
-  @apply flex items-center justify-center gap-2 rounded-full border px-4 py-1.5 text-sm;
-  border-color: var(--md-sys-color-outline);
-  color: var(--md-sys-color-on-surface);
+  @apply flex items-center justify-center gap-2 rounded-full border border-outline px-4 py-1.5 text-on-surface label-large;
 }
 </style>

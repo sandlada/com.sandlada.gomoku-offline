@@ -56,14 +56,10 @@ const isLow = (stone: Stone): boolean => game.hasClock && msOf(stone) < 60_000
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .hud {
-  @apply flex w-full flex-wrap items-center justify-between gap-3 border px-4 py-3;
-  border-radius: var(--md-sys-shape-corner-value-large, 16px);
-  border-color: var(--md-sys-color-outline-variant);
-  border-width: 1px;
-  background: var(--md-sys-color-surface-container-low);
+  @apply flex w-full flex-wrap items-center justify-between gap-3 rounded-large border border-outline-variant bg-surface-container-low px-4 py-3;
 }
 .turn {
   @apply flex items-center gap-2.5;
@@ -80,54 +76,44 @@ const isLow = (stone: Stone): boolean => game.hasClock && msOf(stone) < 60_000
 }
 .pip.white {
   background: radial-gradient(circle at 34% 30%, #ffffff 0%, #c3c9d1 100%);
-  border: 1px solid var(--md-sys-color-outline);
+  @apply border border-outline;
 }
 .pip.draw {
   background: linear-gradient(135deg, #23262b 50%, #ffffff 50%);
-  border: 1px solid var(--md-sys-color-outline);
+  @apply border border-outline;
 }
 .status {
-  @apply text-sm font-medium;
-  color: var(--md-sys-color-on-surface);
+  @apply body-medium text-on-surface;
 }
 .moves {
-  @apply text-xs tabular-nums;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply body-small text-on-surface-variant tabular-nums;
 }
 .meta {
   @apply flex flex-col items-end gap-0.5;
 }
 .score {
-  @apply text-xs tabular-nums;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply body-small text-on-surface-variant tabular-nums;
 }
 .banner {
   @apply flex items-center gap-3;
 }
 .banner-title {
-  @apply text-sm font-semibold;
-  color: var(--md-sys-color-primary);
+  @apply title-small text-primary;
 }
 .again {
-  @apply inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm;
-  background: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
+  @apply inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-on-primary label-large;
 }
 .clocks {
   @apply flex items-center gap-2;
 }
 .clock {
-  @apply flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm tabular-nums;
-  border-color: var(--md-sys-color-outline-variant);
-  color: var(--md-sys-color-on-surface-variant);
+  @apply flex items-center gap-1.5 rounded-full border border-outline-variant px-3 py-1 text-on-surface-variant body-small tabular-nums;
 }
 .clock.active {
-  background: var(--md-sys-color-primary-container);
-  color: var(--md-sys-color-on-primary-container);
-  border-color: transparent;
+  @apply border-transparent bg-primary-container text-on-primary-container;
 }
 .clock.low {
-  color: var(--md-sys-color-error);
+  @apply text-error;
 }
 .pip.sm {
   width: 14px;

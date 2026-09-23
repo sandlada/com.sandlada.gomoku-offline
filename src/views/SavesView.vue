@@ -54,18 +54,16 @@ const resume = async (id: string): Promise<void> => {
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .saves {
   @apply flex flex-col gap-4;
 }
 .heading {
-  @apply text-xl font-semibold;
-  color: var(--md-sys-color-on-surface);
+  @apply title-large text-on-surface;
 }
 .empty {
-  @apply text-sm;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply body-medium text-on-surface-variant;
 }
 .list {
   @apply flex flex-col gap-3;
@@ -74,31 +72,21 @@ const resume = async (id: string): Promise<void> => {
   padding: 0;
 }
 .item {
-  @apply flex flex-col gap-3 border p-4;
-  border-radius: var(--md-sys-shape-corner-value-large, 16px);
-  border-color: var(--md-sys-color-outline-variant);
-  border-width: 1px;
-  background: var(--md-sys-color-surface-container-low);
+  @apply flex flex-col gap-3 rounded-large border border-outline-variant bg-surface-container-low p-4;
 }
 .meta .title {
-  @apply text-sm font-medium;
-  color: var(--md-sys-color-on-surface);
+  @apply title-small text-on-surface;
 }
 .meta .date {
-  @apply text-xs;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply body-small text-on-surface-variant;
 }
 .row {
   @apply flex gap-2;
 }
 .btn {
-  @apply rounded-full border px-4 py-1.5 text-sm;
-  border-color: var(--md-sys-color-outline);
-  color: var(--md-sys-color-on-surface);
+  @apply rounded-full border border-outline px-4 py-1.5 text-on-surface label-large;
 }
 .btn.primary {
-  background: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-  border-color: transparent;
+  @apply border-transparent bg-primary text-on-primary;
 }
 </style>

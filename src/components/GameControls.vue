@@ -43,38 +43,31 @@ const { t } = useI18n()
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .controls {
   @apply flex flex-col items-center gap-3;
 }
 .seg {
-  @apply inline-flex rounded-full border p-1 gap-1;
-  border-color: var(--md-sys-color-outline-variant);
+  @apply inline-flex gap-1 rounded-full border border-outline-variant p-1;
 }
 .seg button {
-  @apply rounded-full px-4 py-1.5 text-sm;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply rounded-full px-4 py-1.5 text-sm text-on-surface-variant;
 }
 .seg button.active {
-  background: var(--md-sys-color-primary-container);
-  color: var(--md-sys-color-on-primary-container);
+  @apply bg-primary-container text-on-primary-container;
 }
 .row {
-  @apply flex gap-2 flex-wrap justify-center;
+  @apply flex flex-wrap justify-center gap-2;
 }
 .btn {
-  @apply rounded-full border px-4 py-1.5 text-sm inline-flex items-center gap-1.5;
-  border-color: var(--md-sys-color-outline);
-  color: var(--md-sys-color-on-surface);
+  @apply inline-flex items-center gap-1.5 rounded-full border border-outline px-4 py-1.5 text-sm text-on-surface;
 }
 .btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
 .btn.primary {
-  background: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-  border-color: transparent;
+  @apply border-transparent bg-primary text-on-primary;
 }
 </style>

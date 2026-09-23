@@ -69,45 +69,36 @@ const start = async (): Promise<void> => {
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .setup {
   @apply flex flex-col gap-5;
 }
 .heading {
-  @apply text-xl font-semibold;
-  color: var(--md-sys-color-on-surface);
+  @apply title-large text-on-surface;
 }
 .group {
   @apply flex flex-col gap-2;
 }
 .group h3 {
-  @apply text-sm font-medium;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply title-small text-on-surface-variant;
 }
 .seg {
-  @apply inline-flex rounded-full border p-1 gap-1 self-start;
-  border-color: var(--md-sys-color-outline-variant);
+  @apply inline-flex gap-1 self-start rounded-full border border-outline-variant p-1;
 }
 .seg.wrap {
-  @apply flex-wrap;
-  border-radius: var(--md-sys-shape-corner-value-large, 16px);
+  @apply flex-wrap rounded-large;
 }
 .seg button {
-  @apply rounded-full px-4 py-1.5 text-sm;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply rounded-full px-4 py-1.5 text-on-surface-variant label-large;
 }
 .seg button.active {
-  background: var(--md-sys-color-primary-container);
-  color: var(--md-sys-color-on-primary-container);
+  @apply bg-primary-container text-on-primary-container;
 }
 .hint {
-  @apply text-xs;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply body-small text-on-surface-variant;
 }
 .start {
-  @apply flex items-center justify-center gap-2 rounded-full px-4 py-3 text-base;
-  background: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
+  @apply flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-3 text-on-primary body-large;
 }
 </style>

@@ -26,7 +26,7 @@ onUnmounted(() => window.removeEventListener('resize', onResize))
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .layout {
   @apply mx-auto flex min-h-svh w-full max-w-5xl flex-col gap-6 px-4 py-6;

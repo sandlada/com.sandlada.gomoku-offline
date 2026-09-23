@@ -37,18 +37,13 @@ watch(
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .history {
-  @apply flex w-full flex-col gap-2 border px-4 py-3;
-  border-radius: var(--md-sys-shape-corner-value-large, 16px);
-  border-color: var(--md-sys-color-outline-variant);
-  border-width: 1px;
-  background: var(--md-sys-color-surface-container-low);
+  @apply flex w-full flex-col gap-2 rounded-large border border-outline-variant bg-surface-container-low px-4 py-3;
 }
 .title {
-  @apply text-xs font-medium uppercase tracking-wider;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply label-small text-on-surface-variant uppercase tracking-wider;
 }
 .list {
   @apply flex max-h-44 flex-col gap-1 overflow-y-auto;
@@ -57,20 +52,16 @@ watch(
   padding: 0;
 }
 .move {
-  @apply flex items-center gap-2 px-2 py-1 text-sm tabular-nums;
-  border-radius: var(--md-sys-shape-corner-value-small, 8px);
-  color: var(--md-sys-color-on-surface);
+  @apply flex items-center gap-2 rounded-small px-2 py-1 text-on-surface body-medium tabular-nums;
 }
 .move.latest {
-  background: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
+  @apply bg-secondary-container text-on-secondary-container;
 }
 .num {
-  @apply w-6 text-xs;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply w-6 text-on-surface-variant body-small;
 }
 .move.latest .num {
-  color: var(--md-sys-color-on-secondary-container);
+  @apply text-on-secondary-container;
 }
 .dot {
   width: 12px;
@@ -83,10 +74,9 @@ watch(
 }
 .dot.white {
   background: radial-gradient(circle at 34% 30%, #ffffff 0%, #c3c9d1 100%);
-  border: 1px solid var(--md-sys-color-outline);
+  @apply border border-outline;
 }
 .empty {
-  @apply text-xs;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply body-small text-on-surface-variant;
 }
 </style>

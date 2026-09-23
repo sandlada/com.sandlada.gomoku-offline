@@ -20,11 +20,9 @@ const goBack = async (): Promise<void> => {
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .back-btn {
-  @apply inline-flex items-center gap-1.5 self-start rounded-full border px-4 py-1.5 text-sm;
-  border-color: var(--md-sys-color-outline-variant);
-  color: var(--md-sys-color-on-surface-variant);
+  @apply inline-flex items-center gap-1.5 self-start rounded-full border border-outline-variant px-4 py-1.5 text-sm text-on-surface-variant;
 }
 </style>

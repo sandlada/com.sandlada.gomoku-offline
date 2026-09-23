@@ -30,7 +30,7 @@ const { t } = useI18n()
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .home {
   @apply flex flex-col gap-6;
@@ -39,37 +39,26 @@ const { t } = useI18n()
   @apply text-center;
 }
 .title {
-  @apply text-3xl font-semibold tracking-tight;
-  color: var(--md-sys-color-on-surface);
+  @apply headline-medium text-center text-on-surface;
   font-family: 'Noto Sans', system-ui, sans-serif;
 }
 .subtitle {
-  @apply text-center text-sm;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply text-center text-on-surface-variant body-medium;
 }
 .menu {
   @apply flex flex-col gap-3;
 }
 .menu-btn {
-  @apply flex items-center justify-center gap-2 rounded-full border px-4 py-3 text-base;
-  border-color: var(--md-sys-color-outline);
-  color: var(--md-sys-color-on-surface);
+  @apply flex items-center justify-center gap-2 rounded-full border border-outline px-4 py-3 text-on-surface body-large;
   text-decoration: none;
 }
 .menu-btn.primary {
-  background: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-  border-color: transparent;
+  @apply border-transparent bg-primary text-on-primary;
 }
 .rules {
-  @apply border p-4 text-sm leading-relaxed;
-  border-radius: var(--md-sys-shape-corner-value-large, 16px);
-  border-color: var(--md-sys-color-outline-variant);
-  color: var(--md-sys-color-on-surface-variant);
-  border-width: 1px;
+  @apply rounded-large border border-outline-variant p-4 text-on-surface-variant body-medium leading-relaxed;
 }
 .rules h2 {
-  @apply mb-1 text-base font-medium;
-  color: var(--md-sys-color-on-surface);
+  @apply mb-1 text-on-surface title-small;
 }
 </style>

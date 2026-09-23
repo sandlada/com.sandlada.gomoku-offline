@@ -30,18 +30,15 @@ const switchTo = (code: AppLocale): void => {
 </script>
 
 <style scoped>
-@reference "tailwindcss";
+@reference "../style.css";
 
 .lang {
-  @apply inline-flex gap-1 rounded-full border p-1;
-  border-color: var(--md-sys-color-outline-variant);
+  @apply inline-flex gap-1 rounded-full border border-outline-variant p-1;
 }
 .lang button {
-  @apply rounded-full px-3 py-1 text-sm;
-  color: var(--md-sys-color-on-surface-variant);
+  @apply rounded-full px-3 py-1 text-sm text-on-surface-variant;
 }
 .lang button.active {
-  background: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
+  @apply bg-secondary-container text-on-secondary-container;
 }
 </style>
